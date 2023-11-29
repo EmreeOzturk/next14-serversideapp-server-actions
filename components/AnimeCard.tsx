@@ -7,7 +7,7 @@ const AnimeCard: React.FC<AnimeCardComponentProps> = ({
     return (
         <div className='max-w-sm rounded-md relative w-full'>
             <div className='relative w-full h-[37vh]'>
-                <Image src={anime?.image.original} fill className='rounded-xl' alt={anime.name} />
+                <Image src={'https://shikimori.one/'+anime?.image.original} fill className='rounded-xl' alt={anime.name} />
             </div>
             <div className='py-4 flex flex-col gap-3'>
                 <div className='flex justify-between items-center gap-1'>
