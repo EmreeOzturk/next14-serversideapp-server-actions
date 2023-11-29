@@ -1,4 +1,5 @@
 import AnimeCard from '@/components/AnimeCard'
+import LoadMore from '@/components/LoadMore'
 import { data } from '@/data'
 export default function Home() {
   return (
@@ -13,7 +14,7 @@ export default function Home() {
           })
         }
       </section>
-      {/* <LoadMore /> */}
+      <LoadMore />
     </main>
   )
 }
