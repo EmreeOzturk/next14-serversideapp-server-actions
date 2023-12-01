@@ -22,4 +22,5 @@ export type AnimeCardComponentProps = {
     score: string;
   };
   index: number;
+  counter: number;
 };

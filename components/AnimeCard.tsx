@@ -1,12 +1,24 @@
 import Image from 'next/image'
 import { AnimeCardComponentProps } from '@/prop-types'
-import MotionDiv from './MotionDiv'
+import { MotionDiv } from './MotionDiv'
 const AnimeCard: React.FC<AnimeCardComponentProps> = ({
     anime,
-    index
+    index,
+    counter
 }) => {
     return (
-        <MotionDiv>
+        <MotionDiv
+            className='w-full h-full flex flex-col gap-2'
+            initial={{ opacity: 0, scale: 0 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{
+                type: "spring",
+                stiffness: 60,
+                damping: 20,
+                duration: 1,
+                delay: counter * 0.11
+            }}
+        >
             <div className='max-w-sm rounded-md relative w-full'>
                 <div className='relative w-full h-[37vh]'>
                     <Image src={'https://shikimori.one/' + anime?.image.original} fill className='rounded-xl' alt={anime.name} />

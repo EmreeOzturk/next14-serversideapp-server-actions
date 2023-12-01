@@ -24,8 +24,9 @@ const AnimeList: React.FC<AnimeListProps> = ({
         <section className="grid grid-cols-1 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-10">
             {
                 dataAnime.map((anime: AnimeProps, index: number) => {
+                    const counter = index % 8;
                     return (
-                        <AnimeCard key={anime.id} anime={anime} index={index} />
+                        <AnimeCard key={anime.id} anime={anime} index={index} counter={counter} />
                     )
                 })
             }
